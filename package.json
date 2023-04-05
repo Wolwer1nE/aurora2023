@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "esbuild --bundle src/index.js --loader:.png=file --outfile=dist/index.js --watch",
+    "watch": "esbuild --bundle src/index.js --loader:.png=file --outfile=dist/index.js --watch",
     "build": "esbuild --bundle src/index.js --loader:.png=file --outfile=dist/index.js"
   },
   "license": "ISC",
@@ -12,6 +12,7 @@
     "esbuild": "0.17.15"
   },
   "dependencies": {
-    "easystarjs": "^0.4.4"
+    "easystarjs": "^0.4.4",
+    "phaser": "^3.20.1"
   }
 }
