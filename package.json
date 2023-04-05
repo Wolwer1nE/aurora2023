@@ -4,15 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "esbuild --bundle src/index.js --loader:.png=file --outfile=dist/index.js --watch",
+    "build": "esbuild --bundle src/index.js --loader:.png=file --outfile=dist/index.js"
   },
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.7.0"
+    "esbuild": "0.17.15"
   },
   "dependencies": {
-    "easystarjs": "^0.4.4",
-    "phaser": "^3.20.1"
+    "easystarjs": "^0.4.4"
   }
 }

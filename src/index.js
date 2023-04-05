@@ -7,7 +7,7 @@ const config = {
   width: 800,
   height: 600,
   pixelArt: true,
-  zoom: 1.2,
+  zoom: 1.8,
   scene: StartingScene,
   physics: {
     default: "arcade",

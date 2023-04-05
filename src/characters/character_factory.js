@@ -31,7 +31,6 @@ export default class CharacterFactory {
                 new AnimationLoader(scene, this.slimeSpriteSheet, slimeConfigJson, this.slimeSpriteSheet).createAnimations());
         this.animationLibrary = animationLibrary;
     }
-
     buildCharacter(spriteSheetName, x, y, params = {}) {
         switch (spriteSheetName) {
             case 'aurora':
@@ -49,6 +48,7 @@ export default class CharacterFactory {
                 return this.buildSlime(x, y, params);
         }
     }
+
 
     buildPlayerCharacter(spriteSheetName, x, y) {
         let character = new Player(this.scene, x, y, spriteSheetName, 2);

@@ -25,7 +25,7 @@ let StartingScene = new Phaser.Class({
         this.load.image("tiles", tilemapPng);
         this.load.tilemapTiledJSON("map", dungeonRoomJson);
 
-        //loading spitesheets
+        //loading sprite-sheets
         this.load.spritesheet('aurora', auroraSpriteSheet, this.characterFrameConfig);
         this.load.spritesheet('blue', blueSpriteSheet, this.characterFrameConfig);
         this.load.spritesheet('green', greenSpriteSheet, this.characterFrameConfig);
@@ -73,7 +73,9 @@ let StartingScene = new Phaser.Class({
         this.characterFactory = new CharacterFactory(this);
 
         // Creating characters
-        this.player = this.characterFactory.buildCharacter('aurora', 100, 100, {player: true});
+        this.player = this.characterFactory.buildCharacter('aurora',
+            100, 100,
+            {player: true});
         this.gameObjects.push(this.player);
         this.physics.add.collider(this.player, worldLayer);
 
@@ -101,6 +103,7 @@ let StartingScene = new Phaser.Class({
                 .setDepth(20);
         });
     },
+
     update: function () {
         if (this.gameObjects)
         {
