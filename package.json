@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "esbuild --bundle src/index.js --loader:.png=file --outfile=dist/index.js --watch",
-    "build": "esbuild --bundle src/index.js --loader:.png=file --outfile=dist/index.js"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "license": "ISC",
   "devDependencies": {
-    "esbuild": "0.17.15"
+    "vite": "^4.2.1"
   },
   "dependencies": {
     "easystarjs": "^0.4.4",
